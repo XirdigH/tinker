@@ -3,13 +3,12 @@ buildscript {
     repositories {
         mavenLocal()
         mavenCentral()
+        gradlePluginPortal()
         google()
-        jcenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.2.0'
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.6'
-        classpath "com.github.jengelman.gradle.plugins:shadow:4.0.4"
+        classpath "com.github.johnrengelman.shadow:com.github.johnrengelman.shadow.gradle.plugin:4.0.4"
     }
 }
 
@@ -17,8 +16,8 @@ allprojects {
     repositories {
         mavenLocal()
         mavenCentral()
+        gradlePluginPortal()
         google()
-        jcenter()
     }
 
     tasks.withType(Javadoc).all {
@@ -36,7 +35,7 @@ ext {
     javaVersion = JavaVersion.VERSION_1_8
 
     GROUP = 'com.tencent.tinker'
-    VERSION_NAME = '1.9.14.26.3-fix1'
+    VERSION_NAME = '1.9.15'
 
     POM_DESCRIPTION = 'Tinker is a hot-fix solution library for Android, it supports dex, library and resources update without reinstalling apk.'
     POM_URL = 'https://github.com/Tencent/tinker'
